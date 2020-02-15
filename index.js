@@ -78,6 +78,20 @@ function Car(model, milesPerGallon) {
 Car.prototype.fill = function(gallons){
   this.tank += gallons;
 }
+Car.prototype.drive = function(distance){
+
+  let maxDistance = this.tank * this.milesPerGallon;
+
+  if(maxDistance > distance){
+    this.tank -= 1/this.milesPerGallon * distance;
+    this.odometer += distance;
+  }
+  if(maxDistance < distance){
+    this.tank = 0;
+    this.odometer += maxDistance;
+    return `I ran out of fuel at ${this.odometer} miles!`
+  }
+}
 
 /*
   TASK 3
@@ -90,7 +104,7 @@ function Baby(name, age, favoriteToy) {
   Person.call(this, name, age);
   this.favoriteToy = favoriteToy;
 }
-Baby.prototype = Object.create(Person.prototype);
+Baby.prototype = Object.create(Person.prototype); //**We have to manually tell Baby about Person using Object.create(). */
 Baby.prototype.play = function(){
   return `Playing with ${this.favoriteToy}`
 }
