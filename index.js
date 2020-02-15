@@ -52,6 +52,9 @@ Person.prototype.eat = function(food){
 Person.prototype.poop = function(){
   this.stomach = [];
 }
+Person.prototype.toString = function(){
+  return `${this.name}, ${this.age}`
+}
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
