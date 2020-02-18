@@ -56,6 +56,22 @@ Person.prototype.toString = function(){
   return `${this.name}, ${this.age}`
 }
 
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.stomach = [];
+//     this.eat = function(food){
+//       if (this.stomach.length < 10){
+//         this.stomach.push(food);
+//       }
+//     }
+//     this.poop = function(){
+//       this.stomach = [];
+//     }
+//     this.toString = function(){
+//       return `${this.name}, ${this.age}`
+//     }
+//   }
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
@@ -115,13 +131,13 @@ Baby.prototype.play = function(){
 
   In your own words explain the four principles for the "this" keyword below:
   Principle 1: Window/Global Object Binding
-  1. In global scope this refers to the window or console object
+  1. 'this' refers to the window or console object
   Principle 2: Implicit Binding
-  2. When a preceding dot calls a function the object before the dot is this
+  2. 'this' refers to a parent object
   Principle 3: New binding
-  3. when we use a constructor function this is the instance of the object created in the constructor function
+  3. 'this' refers to the instance of the object created in the constructor function
   Principle 4: Explicit binding
-  4. using .call and .apply methods this is explicitly defined
+  4. using .call and .apply methods 'this' is explicitly defined
 */
 
 
