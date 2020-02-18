@@ -137,7 +137,7 @@ Baby.prototype.play = function(){
   Principle 3: New binding
   3. 'this' refers to the instance of the object created in the constructor function
   Principle 4: Explicit binding
-  4. using .call .apply and .bind methods explicitly define 'this' 
+  4. Using .call .apply and .bind methods explicitly define 'this' 
 */
 
 
