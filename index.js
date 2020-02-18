@@ -55,6 +55,7 @@ Person.prototype.poop = function(){
 Person.prototype.toString = function(){
   return `${this.name}, ${this.age}`
 }
+
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
@@ -113,10 +114,14 @@ Baby.prototype.play = function(){
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  Principle 1: Window/Global Object Binding
+  1. In global scope this refers to the window or console object
+  Principle 2: Implicit Binding
+  2. When a preceding dot calls a function the object before the dot is this
+  Principle 3: New binding
+  3. when we use a constructor function this is the instance of the object created in the constructor function
+  Principle 4: Explicit binding
+  4. using .call and .apply methods this is explicitly defined
 */
 
 
